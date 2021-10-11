@@ -35,8 +35,8 @@ jobs:
           tag="latest"
           token=$(curl -sX GET \
             "https://ghcr.io/token?scope=repository%3Athespad%2F${{ env.APP_NAME }}%3Apull" \
-            | jq -r 'try .token')
-          if [ ${token} == "null"]; then
+            | jq -r '.token[]?')
+          if [ -z "${token}" ]; then
             IMAGE_VERSION="null"
           else
             multidigest=$(curl -s \

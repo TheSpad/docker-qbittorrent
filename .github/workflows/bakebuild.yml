@@ -9,8 +9,8 @@ on:
     types: [ assigned ]      
 
 env:
-  DOCKERHUB_SLUG: thespad/changedetection.io
-  GHCR_SLUG: ghcr.io/thespad/changedetection.io
+  DOCKERHUB_SLUG: thespad/qbittorrent
+  GHCR_SLUG: ghcr.io/thespad/qbittorrent
 
 jobs:
   bake:
@@ -28,8 +28,8 @@ jobs:
             ${{ env.DOCKERHUB_SLUG }}
             ${{ env.GHCR_SLUG }}
           labels: |
-            org.opencontainers.image.title=changedetection.io
-            org.opencontainers.image.description=changedetection.io
+            org.opencontainers.image.title=qbittorrent
+            org.opencontainers.image.description=qbittorrent
             org.opencontainers.image.vendor=TheSpad
       -
         name: Set up QEMU

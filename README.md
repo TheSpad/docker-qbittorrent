@@ -33,6 +33,8 @@ The architectures supported by this image are:
 
 ## Application Setup
 
+These builds are from the **unstable** branch of qbittorrent.
+
 Webui is accessible at http://SERVERIP:PORT
 
 More info at [qbittorrent](https://github.com/qbittorrent/qbittorrent/).

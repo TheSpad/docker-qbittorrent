@@ -20,7 +20,7 @@ jobs:
         id: build_check
         run: |
           echo "**** Retrieving external version ****"
-          EXT_RELEASE=$(curl -sX GET https://api.github.com/repos/qbittorrent/qbittorrent/tags | jq -r 'first(.[] | select(.name | contains("release-4.4.0") )) | .name');
+          EXT_RELEASE=$(curl -sX GET https://api.github.com/repos/qbittorrent/qbittorrent/tags | jq -r 'first(.[] | select(.name | contains("release-4.4") )) | .name');
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "**** Can't retrieve external version, exiting ****"
             exit 1

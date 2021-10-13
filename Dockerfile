@@ -56,7 +56,7 @@ RUN \
   tar xf "$HOME/boost_1_76_0.tar.gz" -C "$HOME" && \
   echo "**** build libtorrent ****" && \  
   git clone --shallow-submodules --recurse-submodules https://github.com/arvidn/libtorrent.git ~/libtorrent && cd ~/libtorrent && \
-  git checkout "$(git tag -l --sort=-v:refname "v2*" | head -n 1)" && \
+  git checkout "$(git tag -l --sort=-v:refname "v1*" | head -n 1)" && \
   cmake -Wno-dev -G Ninja -B build \
     -D CMAKE_BUILD_TYPE="release" \
     -D CMAKE_CXX_STANDARD=17 \

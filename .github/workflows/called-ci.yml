@@ -1,0 +1,18 @@
+name: Check for update and release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 10 * * *'
+
+jobs:
+  call-workflow:
+    uses: thespad/actions/.github/workflows/ci.yml@v2
+    with:
+      repo_owner: ${{ github.repository_owner }}
+      app_name: "qbittorrent"
+      release_type: "github_tag"
+      release_url: "https://api.github.com/repos/qbittorrent/qbittorrent/"
+      release_name: "release-4.4.0"
+    secrets:
+      repo_scoped_token: ${{ secrets.repo_scoped_token }}

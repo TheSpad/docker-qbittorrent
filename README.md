@@ -173,4 +173,5 @@ docker build \
 
 ## Versions
 
+* **06.12.21:** - Rebase to Alpine 3.15
 * **10.10.21:** - Initial Release.

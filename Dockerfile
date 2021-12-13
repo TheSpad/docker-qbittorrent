@@ -44,7 +44,7 @@ RUN \
     qt5-qtsvg \
     tar \
     zlib && \
-  apk add -U --upgrade --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ unrar && \    
+  apk add -U --upgrade --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.14/main/ unrar && \    
   git clone --shallow-submodules --recurse-submodules https://github.com/ninja-build/ninja.git ~/ninja && cd ~/ninja && \
   git checkout "$(git tag -l --sort=-v:refname "v*" | head -n 1)" && \
   cmake -Wno-dev -B build \

@@ -11,8 +11,6 @@ jobs:
     with:
       repo_owner: ${{ github.repository_owner }}
       app_name: "qbittorrent"
-      release_type: "github_tag"
-      release_url: "https://api.github.com/repos/qbittorrent/qbittorrent"
-      release_name: "release-4.4.0"
+      release_type: "script"
     secrets:
       repo_scoped_token: ${{ secrets.repo_scoped_token }}
